@@ -15,7 +15,7 @@ export default function HomePage() {
     setResult(data.message);
   }
 
-  return `
+  return (
     <div style={{ textAlign: "center", maxWidth: 400 }}>
       <h1>🎉 Yura CORPORATION</h1>
       <h2>Cérémonie du 22 novembre - Kairouan</h2>
@@ -29,5 +29,5 @@ export default function HomePage() {
       <button onClick={verifyCode}>Vérifier</button>
       
       {result && <p style={{ marginTop: 20 }}>{result}</p>}
-    </div>`;
+    </div>);
 }

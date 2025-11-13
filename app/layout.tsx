@@ -4,11 +4,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return `
+  return (
     <html lang="fr">
       <body style={{ fontFamily: "sans-serif", background: "#fafafa", margin: 0 }}>
         {children}
       </body>
-    </html>`
-  ;
+    </html>
+  );
 }

@@ -16,10 +16,18 @@ export default function AdminPage() {
     setMessage(data.message);
   }
 
-  return `
+  return (
     <div style={{ textAlign: "center", maxWidth: 500 }}>
       <h1>🔐 Admin - Import Codes</h1>
-      <input type="password" placeholder="Mot de passe admin" value={password} onChange={e => setPassword(e.target.value)} />
+
+      <input 
+      type="password" 
+      placeholder="Mot de passe admin" 
+      value={password} 
+      onChange={e => setPassword(e.target.value)} 
+      style={{ width: "100%", marginBottom: 10 }}
+      />
+
       <textarea
         rows={10}
         placeholder="name,code\nAli,YURA-001\nSara,YURA-002"
@@ -27,8 +35,13 @@ export default function AdminPage() {
         onChange={e => setCsv(e.target.value)}
         style={{ width: "100%", marginTop: 10 }}
       />
-      <button onClick={importCodes}>Importer</button>
+
+      <button onClick={importCodes} style={{ marginTop: 10}}>
+        Importer
+      </button>
+
       {message && <p>{message}</p>}
-    </div>`;
+    </div>
+    );
   
 }
